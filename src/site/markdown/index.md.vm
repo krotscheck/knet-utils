@@ -1,0 +1,67 @@
+#parse( "scripts.vm" )
+
+$h1 knet-utils
+<span class="lead">${project.description}</span>
+
+This project contains a collection of low level utility classes useful for 
+generic java development. They were originally developed for the 
+jersey2-toolkit, however they have proven useful across more projects.
+
+#dependency("knet-utils")
+
+---
+
+$h2 ResourceUtil
+
+A utility to easil access resource files either by stream or by string.
+
+    InputStream stream = ResourceUtil.getResourceAsStream('/path/to/resource');
+
+    String content = ResourceUtil.getResourceAsString('/path/to/resource');
+
+---
+
+$h2 UnitTest and IntegrationTest
+
+An interface which you may use to annotate unit tests, 
+and control running them via he JUnit 4 Category annotation.
+
+    @Category(UnitTest.class)
+    public final class MyUnitTest {
+    }
+    
+    @Category(IntegrationTest.class)
+    public final class MyIntegrationTest {
+    }
+
+ You'll also need to make the following changes to your `pom.xml`
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.16</version>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-junit47</artifactId>
+                <version>2.16</version>
+            </dependency>
+        </dependencies>
+        <configuration>
+            <groups>net.krotscheck.test.UnitTest</groups>
+            <excludedGroups>net.krotscheck.test.IntegrationTest</excludedGroups>
+        </configuration>
+        <executions>
+            <execution>
+                <id>integration-tests</id>
+                <phase>integration-test</phase>
+                <goals>
+                    <goal>test</goal>
+                </goals>
+                <configuration>
+                    <groups>net.krotscheck.test.IntegrationTest</groups>
+                    <excludedGroups>net.krotscheck.test.UnitTest</excludedGroups>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
