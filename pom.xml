@@ -15,7 +15,9 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck</groupId>
@@ -41,7 +43,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.4</version>
                         <configuration>
                             <passphrase>${gpg.passphrase}</passphrase>
                         </configuration>
@@ -150,16 +151,143 @@
     </distributionManagement>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.github</groupId>
+                    <artifactId>site-maven-plugin</artifactId>
+                    <version>0.10</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.4.2</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.scm</groupId>
+                            <artifactId>maven-scm-provider-gitexe</artifactId>
+                            <version>1.9</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.4</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>lt.velykis.maven.skins</groupId>
+                            <artifactId>reflow-velocity-tools</artifactId>
+                            <version>1.1.1</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.velocity</groupId>
+                            <artifactId>velocity</artifactId>
+                            <version>1.7</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.18.1</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-junit47</artifactId>
+                            <version>2.18.1</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.eluder.coveralls</groupId>
+                    <artifactId>coveralls-maven-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-pmd-plugin</artifactId>
+                    <version>3.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.10.3</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>2.6.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.10</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>2.8</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jxr-plugin</artifactId>
+                    <version>2.5</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <version>3.0.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>2.15</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>2.18.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
             <!-- Deploy the web site -->
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
-                <version>0.10</version>
                 <configuration>
                     <server>github</server>
-                    <message>Site:
-                        ${project.groupId}:${project.artifactId}:${project.version}
+                    <message>Site: ${project.groupId}:${project.artifactId}:${project.version}
                     </message>
                     <merge>true</merge>
                     <oauth2Token>${github.oauth2Token}</oauth2Token>
@@ -178,14 +306,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.4.2</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>1.9</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
                     <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
                 </configuration>
@@ -194,29 +314,15 @@
             <!-- Site plugin. -->
             <plugin>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.4</version>
                 <configuration>
                     <skipDeploy>true</skipDeploy>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>lt.velykis.maven.skins</groupId>
-                        <artifactId>reflow-velocity-tools</artifactId>
-                        <version>1.1.1</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.apache.velocity</groupId>
-                        <artifactId>velocity</artifactId>
-                        <version>1.7</version>
-                    </dependency>
-                </dependencies>
             </plugin>
 
             <!-- Compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
@@ -226,7 +332,6 @@
             <!-- Jar configuration -->
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -245,18 +350,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.16</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.surefire</groupId>
-                        <artifactId>surefire-junit47</artifactId>
-                        <version>2.16</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
                     <groups>net.krotscheck.test.UnitTest</groups>
-                    <excludedGroups>net.krotscheck.test.IntegrationTest
-                    </excludedGroups>
+                    <excludedGroups>net.krotscheck.test.IntegrationTest</excludedGroups>
                 </configuration>
                 <executions>
                     <execution>
@@ -267,8 +363,7 @@
                         </goals>
                         <configuration>
                             <groups>net.krotscheck.test.IntegrationTest</groups>
-                            <excludedGroups>net.krotscheck.test.UnitTest
-                            </excludedGroups>
+                            <excludedGroups>net.krotscheck.test.UnitTest</excludedGroups>
                         </configuration>
                     </execution>
                 </executions>
@@ -278,15 +373,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>clean</goal>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <check>
                         <haltOnFailure>true</haltOnFailure>
@@ -302,12 +388,15 @@
                     </formats>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+            </plugin>
 
             <!-- Attach sources -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -322,7 +411,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -332,38 +420,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- Clean Plugin -->
-            <plugin>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>2.5</version>
-            </plugin>
-
-            <!-- Resources plugin -->
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
-            </plugin>
-
-            <!-- Install plugin -->
-            <plugin>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.1</version>
-            </plugin>
-
-            <!-- Deploy plugin  -->
-            <plugin>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.1</version>
-            </plugin>
-
-            <!-- Dependency plugin -->
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.8</version>
-            </plugin>
-
-
         </plugins>
     </build>
 
@@ -421,7 +477,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.7</version>
                 <configuration>
                     <dependencyLocationsEnabled>false
                     </dependencyLocationsEnabled>
@@ -449,12 +504,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.3</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>2.5.4</version>
                 <configuration>
                     <xmlOutput>true</xmlOutput>
                     <xmlOutputDirectory>target/site</xmlOutputDirectory>
@@ -463,7 +516,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.12.1</version>
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation>
                     <failsOnError>true</failsOnError>
@@ -472,7 +524,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.17</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -481,8 +532,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
             </plugin>
         </plugins>
     </reporting>
+
 </project>

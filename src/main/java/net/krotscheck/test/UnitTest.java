@@ -19,7 +19,7 @@ package net.krotscheck.test;
 
 /**
  * A marker interface used for JUnit categorization.
- * <p/>
+ *
  * The junit category runner supports inclusion and exclusion of specific test
  * via the <code>@Category(IntegrationTest.class)</code>. By using this
  * annotation, you can then use the 'groups' and 'excludedGroups' parameters in
