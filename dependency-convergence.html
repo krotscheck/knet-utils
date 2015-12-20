@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Project Summary | knet-utils</title>
+		<title>Dependency Convergence | knet-utils</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -49,7 +49,7 @@
 		</script>
 		</head>
 
-	<body class="page-project-summary project-knet-utils" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-dependency-convergence project-knet-utils" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -91,86 +91,100 @@
 		<div class="span12">
 			<div class="body-content">
 <div class="section"> 
- <h2 id="Project_Summary">Project Summary</h2> 
- <a name="Project_Summary"></a> 
+ <h2 id="Dependency_Convergence">Dependency Convergence</h2> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <caption> 
+   <b>Legend:</b> 
+  </caption> 
+  <tbody> 
+   <tr class="a"> 
+    <td><i class="icon-exclamation-sign"></i></td> 
+    <td>At least one dependency has a differing version of the dependency or has SNAPSHOT dependencies.</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <br /> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <thead> 
+   <tr class="a"> 
+    <th>Ready for release (100 % convergence and no SNAPSHOTS):</th> 
+    <td><i class="icon-exclamation-sign"></i>&nbsp;<b>Error</b><br />You do not have 100 % convergence.</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="b"> 
+    <th>Convergence (NOD/NOA):</th> 
+    <td><i class="icon-exclamation-sign"></i>&nbsp;<b>93 %</b></td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Number of SNAPSHOT artifacts (NOS):</th> 
+    <td>0</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="b"> 
+    <th>Number of version-conflicting artifacts (NOC):</th> 
+    <td>1</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Number of unique artifacts (NOA):</th> 
+    <td>15</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="b"> 
+    <th>Number of dependencies (NOD):</th> 
+    <td>14</td> 
+   </tr> 
+  </thead> 
+  <caption> 
+   <b>Statistics:</b> 
+  </caption> 
+  <tbody> 
+  </tbody> 
+ </table> 
+</div> 
+<div class="section"> 
+ <h3 id="Dependencies_used_in_this_project">Dependencies used in this project</h3> 
  <div class="section"> 
-  <h3 id="Project_Information">Project Information</h3> 
-  <a name="Project_Information"></a> 
-  <table border="0" class="bodyTable table table-striped table-hover">
-   <thead>
-    <tr class="a"> 
-     <th>Field</th> 
-     <th>Value</th> 
-    </tr>
-   </thead> 
-   <tbody>  
+  <h4 id="junit:junit">junit:junit</h4> 
+  <table border="0" class="bodyTable table table-striped table-hover"> 
+   <tbody> 
     <tr class="b"> 
-     <td>Name</td> 
-     <td>knet-utils</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>Description</td> 
-     <td>Common utilities useful for java development.</td> 
-    </tr> 
-    <tr class="b"> 
-     <td>Homepage</td> 
-     <td><a class="externalLink" href="https://github.com/krotscheck/knet-utils">https://github.com/krotscheck/knet-utils</a></td> 
-    </tr> 
-   </tbody> 
-  </table> 
- </div> 
- <div class="section"> 
-  <h3 id="Project_Organization">Project Organization</h3> 
-  <a name="Project_Organization"></a> 
-  <table border="0" class="bodyTable table table-striped table-hover">
-   <thead>
-    <tr class="a"> 
-     <th>Field</th> 
-     <th>Value</th> 
-    </tr>
-   </thead> 
-   <tbody>  
-    <tr class="b"> 
-     <td>Name</td> 
-     <td>krotscheck.net</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>URL</td> 
-     <td><a class="externalLink" href="http://www.krotscheck.net">http://www.krotscheck.net</a></td> 
-    </tr> 
-   </tbody> 
-  </table> 
- </div> 
- <div class="section"> 
-  <h3 id="Build_Information">Build Information</h3> 
-  <a name="Build_Information"></a> 
-  <table border="0" class="bodyTable table table-striped table-hover">
-   <thead>
-    <tr class="a"> 
-     <th>Field</th> 
-     <th>Value</th> 
-    </tr>
-   </thead> 
-   <tbody>  
-    <tr class="b"> 
-     <td>GroupId</td> 
-     <td>net.krotscheck</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>ArtifactId</td> 
-     <td>knet-utils</td> 
-    </tr> 
-    <tr class="b"> 
-     <td>Version</td> 
-     <td>1.0.2</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>Type</td> 
-     <td>jar</td> 
-    </tr> 
-    <tr class="b"> 
-     <td>Java Version</td> 
-     <td>1.8</td> 
+     <td><i class="icon-exclamation-sign"></i></td> 
+     <td> 
+      <table border="0" class="bodyTable table table-striped table-hover"> 
+       <tbody> 
+        <tr class="a"> 
+         <td width="25%">4.11</td> 
+         <td> 
+          <ol style="list-style-type: decimal">
+            net.krotscheck:knet-utils:jar:1.0.2 
+           <br />+-&nbsp;junit:junit:jar:4.11:test 
+           <br />\-&nbsp;org.powermock:powermock-module-junit4:jar:1.5.5:test 
+           <br />&nbsp;&nbsp;&nbsp;\-&nbsp;(junit:junit:jar:4.11:test - omitted for duplicate) 
+           <br /> 
+           <br /> 
+          </ol></td> 
+        </tr> 
+        <tr class="b"> 
+         <td width="25%">4.4</td> 
+         <td> 
+          <ol style="list-style-type: decimal">
+            net.krotscheck:knet-utils:jar:1.0.2 
+           <br />\-&nbsp;org.powermock:powermock-module-junit4:jar:1.5.5:test 
+           <br />&nbsp;&nbsp;&nbsp;\-&nbsp;org.powermock:powermock-module-junit4-common:jar:1.5.5:test 
+           <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\-&nbsp;(junit:junit:jar:4.4:test - omitted for conflict with 4.11) 
+           <br /> 
+           <br /> 
+          </ol></td> 
+        </tr> 
+       </tbody> 
+      </table></td> 
     </tr> 
    </tbody> 
   </table> 
@@ -225,8 +239,8 @@
 						<li >
 							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
 							<ul class="nav nav-list">
-						<li class="active">
-							<a href="#" title="Project Summary">Project Summary</a>
+						<li >
+							<a href="project-summary.html" title="Project Summary">Project Summary</a>
 						</li>
 						<li >
 							<a href="license.html" title="Project License">Project License</a>
@@ -237,8 +251,8 @@
 						<li >
 							<a href="dependencies.html" title="Dependencies">Dependencies</a>
 						</li>
-						<li >
-							<a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a>
+						<li class="active">
+							<a href="#" title="Dependency Convergence">Dependency Convergence</a>
 						</li>
 						<li >
 							<a href="plugins.html" title="Project Plugins">Project Plugins</a>

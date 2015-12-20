@@ -23,7 +23,7 @@ under the License.
     <link>https://github.com/krotscheck/knet-utils</link>
     <description>knet-utils - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2014 krotscheck.net</copyright>
+    <copyright>&#169;2015 krotscheck.net</copyright>
     <item>
       <title>File: 5,
              Errors: 0,
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.util.ResourceUtil.java">net/krotscheck/util/ResourceUtil.java</a>
+                  <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.test.IntegrationTest.java">net/krotscheck/test/IntegrationTest.java</a>
                 </td>
                 <td>
                   0
@@ -61,6 +61,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.test.package-info.java">net/krotscheck/test/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.util.ResourceUtil.java">net/krotscheck/util/ResourceUtil.java</a>
                 </td>
                 <td>
                   0
@@ -89,20 +103,6 @@ under the License.
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.util.package-info.java">net/krotscheck/util/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.test.IntegrationTest.java">net/krotscheck/test/IntegrationTest.java</a>
                 </td>
                 <td>
                   0
