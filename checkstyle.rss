@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2015 krotscheck.net</copyright>
     <item>
-      <title>File: 5,
+      <title>File: 7,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -44,6 +44,34 @@ under the License.
             </tr>
           </thead>
           <tbody>
+                          <tr>
+                <td>
+                  <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.coverage.IgnoreCoverage.java">net/krotscheck/coverage/IgnoreCoverage.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.coverage.package-info.java">net/krotscheck/coverage/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/knet-utils/checkstyle.html#net.krotscheck.test.IntegrationTest.java">net/krotscheck/test/IntegrationTest.java</a>
