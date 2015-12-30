@@ -32,7 +32,7 @@ public class IgnoreCoverageTest {
      */
     @Test
     public void testAnnotationExists() {
-        Assert.assertTrue(IgnoreCoverage.class.isInterface());
+        Assert.assertTrue(IgnoreCoverage.class.isAnnotation());
     }
 
 }

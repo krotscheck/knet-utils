@@ -26,6 +26,6 @@ package net.krotscheck.coverage;
  *
  * @author Michael Krotscheck
  */
-public interface IgnoreCoverage {
+public @interface IgnoreCoverage {
 
 }
