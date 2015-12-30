@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck</groupId>
     <artifactId>knet-utils</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
 
     <packaging>jar</packaging>
     <name>knet-utils</name>
@@ -113,7 +113,7 @@
         <url>
             https://github.com/krotscheck/knet-utils
         </url>
-        <tag>HEAD</tag>
+        <tag>knet-utils-1.0.3</tag>
     </scm>
 
     <properties>
